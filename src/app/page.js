@@ -14,21 +14,36 @@ export default function Home() {
         style={{
           margin: 0,
           paddingBottom: "16px",
+          fontSize: "24px"
         }}
       >
         Welcome to my App
       </h1>
-      <button
-        style={{
-          width: "170px",
-          height: "40px",
-        }}
-      >
-        Halo!!!
-      </button>
-      <button>Halo Halo</button>
+      <HelloButton buttonText={"Rachmat Maulana"} buttonText2={"Teknik Informatika 2021"}/>
     </section>
   );
 }
 
-function HelloButton() {}
+function HelloButton({ buttonText, buttonText2 }) {
+  return (
+    <>
+    <button style={{
+      width: "240px",
+      height: "36px",
+      borderRadius: "8px",
+      marginBottom: "12px"
+    }}>
+      {" "}
+      {buttonText}{""}
+    </button>
+    <button style={{
+      width: "240px",
+      height: "36px",
+      borderRadius: "8px"
+    }}>
+      {" "}
+      {buttonText2}{""}
+    </button>
+    </>
+  )
+} 
